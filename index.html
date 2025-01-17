@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/rock-paper-scissors.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-container">
+        <p class="heading">Rock Paper Scissors</p>
+      </div>
+      <div class="image-container">
+        <button class="image-button js-rock-button">
+          <img
+            src="image/rock-emoji.png"
+            alt="Rock image"
+            class="select-image"
+          />
+        </button>
+
+        <button class="image-button js-paper-button">
+          <img
+            src="image/paper-emoji.png"
+            alt="Paper image"
+            class="select-image"
+          />
+        </button>
+
+        <button class="image-button js-scissors-button">
+          <img
+            src="image/scissors-emoji.png"
+            alt="Scissors image"
+            class="select-image"
+          />
+        </button>
+      </div>
+      <div class="result-container">
+        <p class="js-result result"></p>
+      </div>
+      <div class="moves-container">
+        <p class="js-moves"></p>
+      </div>
+      <div class="score-container">
+        <p class="js-score score"></p>
+      </div>
+      <div class="reset-button-container">
+        <button
+          onclick="
+      score.win =0;
+      score.lose =0;
+      score.tie=0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    "
+          class="reset-score-button"
+        >
+          Reset Game
+        </button>
+        <button class="auto-play-button" onclick="autoplay();">
+          Auto Play
+        </button>
+      </div>
+      <div class="footer-container">
+        <p class="footer">
+          Created By @ Kavan Patel
+          <button class="git-hub">
+            <a href="https://github.com/Kavan3421" target="_blank">GitHub</a>
+          </button>
+        </p>
+      </div>
+    </div>
+    <script src="script/rock-paper-scissors.js"></script>
+  </body>
+</html>
